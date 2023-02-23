@@ -22,6 +22,11 @@ class MyApp extends StatelessWidget {
         primaryColor: AppColors.primaryBlue,
         scaffoldBackgroundColor: AppColors.bgSecondary,
         backgroundColor: AppColors.bgSecondary,
+        textTheme: Theme.of(context).textTheme.apply(
+              bodyColor: AppColors.textDefault,
+              displayColor: AppColors.textDefault,
+              fontFamily: 'Nunito',
+            ),
       ),
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
