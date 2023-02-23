@@ -8,4 +8,5 @@ class AppColors {
   static final Color bgSeparator = Color(0xffDDDDDD);
   static final Color textDisable = Color(0xff94AFB6);
   static final Color bgPrimary = Color(0xff243972);
+  static final Color bgSecondary = Color(0xffF1F3F6);
 }
