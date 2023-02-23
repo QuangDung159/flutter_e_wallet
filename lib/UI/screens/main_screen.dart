@@ -37,26 +37,68 @@ class _MainScreenState extends State<MainScreen> {
                     horizontal: AppDimension.contentPadding,
                   ),
                   child: Column(
-                    children: [
-                      CardItem(),
-                      CardItem(),
-                      CardItem(),
-                      CardItem(),
-                      CardItem(),
-                      CardItem(),
-                      CardItem(),
-                      CardItem(),
-                      CardItem(),
-                      CardItem(),
-                      CardItem(),
-                      CardItem(),
-                    ],
+                    children: renderListCard(),
                   ),
                 ),
               ),
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  List<Widget> renderListCard() {
+    List<Widget> listRender = [];
+
+    for (var i = 0; i < 8; i++) {
+      listRender.add(
+        CardItem(),
+      );
+    }
+
+    listRender.add(renderButtonAddCard());
+
+    return listRender;
+  }
+
+  Widget renderButtonAddCard() {
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: AppDimension.contentPadding,
+      ),
+      margin: EdgeInsets.only(
+        bottom: MediaQuery.of(context).padding.bottom,
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: AppColors.primaryBlue,
+      ),
+      height: 80,
+      child: Row(
+        children: [
+          SizedBox(
+            width: 24,
+          ),
+          Image.asset(
+            AssetHelper.iconCardUnfill,
+            width: 40,
+            height: 40,
+          ),
+          Expanded(
+            child: Container(
+              alignment: Alignment.center,
+              child: Text(
+                'ADD NEW WALLET',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

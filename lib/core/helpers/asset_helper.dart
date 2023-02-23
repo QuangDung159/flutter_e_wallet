@@ -9,4 +9,5 @@ class AssetHelper {
   static const String iconProfile = '$iconDir/icon_profile.png';
   static const String iconMastercard = '$iconDir/icon_mastercard.png';
   static const String iconVisa = '$iconDir/icon_visa.png';
+  static const String iconCardUnfill = '$iconDir/icon_card_unfill.png';
 }
