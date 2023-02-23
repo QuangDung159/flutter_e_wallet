@@ -76,6 +76,24 @@ class _SampleScreenState extends State<SampleScreen> {
                       ),
                       child: Text('asd'),
                     ),
+                    Container(
+                      color: Colors.white,
+                      margin: EdgeInsets.only(bottom: 12),
+                      height: 120,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: AppDimension.contentPadding,
+                      ),
+                      child: Text('asd'),
+                    ),
+                    Container(
+                      color: Colors.white,
+                      margin: EdgeInsets.only(bottom: 12),
+                      height: 120,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: AppDimension.contentPadding,
+                      ),
+                      child: Text('asd'),
+                    ),
                   ],
                 ),
               ),
@@ -101,21 +119,13 @@ class _SampleScreenState extends State<SampleScreen> {
                       Text('asd'),
                     ],
                   ),
-                ],
-              ),
-            ),
-            Container(
-              color: Colors.white,
-              padding: EdgeInsets.symmetric(
-                horizontal: AppDimension.contentPadding,
-                vertical: AppDimension.contentPadding,
-              ),
-              child: Column(
-                children: [
                   Container(
                     height: 20,
                     color: AppColors.primaryBlue,
-                  )
+                  ),
+                  SizedBox(
+                    height: 24,
+                  ),
                 ],
               ),
             ),
