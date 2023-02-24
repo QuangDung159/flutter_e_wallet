@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -18,4 +20,9 @@ setStatusBarColor(
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarBrightness: statusBarBrightness,
   ));
+}
+
+String toPrettyString(Map<String, dynamic> json) {
+  var encoder = JsonEncoder.withIndent('     ');
+  return encoder.convert(json);
 }
