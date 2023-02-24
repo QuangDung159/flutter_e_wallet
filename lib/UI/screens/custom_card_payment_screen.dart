@@ -9,8 +9,10 @@ import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:http/http.dart' as http;
 
 class CustomCardPaymentScreen extends StatefulWidget {
+  const CustomCardPaymentScreen({super.key});
+
   @override
-  _CustomCardPaymentScreenState createState() =>
+  State<CustomCardPaymentScreen> createState() =>
       _CustomCardPaymentScreenState();
 }
 
