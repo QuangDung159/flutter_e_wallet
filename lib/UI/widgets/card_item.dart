@@ -18,12 +18,6 @@ class CardItem extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(12),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.2),
-                blurRadius: 4,
-              ),
-            ],
           ),
           margin: EdgeInsets.only(
             bottom: AppDimension.contentPadding,
@@ -46,8 +40,7 @@ class CardItem extends StatelessWidget {
               ),
               Expanded(
                 child: Column(
-                  crossAxisAlignment:
-                      CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       '**** **** **** 4242',
@@ -58,9 +51,8 @@ class CardItem extends StatelessWidget {
                     ),
                     Text(
                       'Visa',
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w900),
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
                     ),
                   ],
                 ),

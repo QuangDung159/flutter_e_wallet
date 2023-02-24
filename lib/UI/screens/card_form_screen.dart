@@ -36,7 +36,7 @@ class CardFormScreenState extends State<CardFormScreen> {
     border = OutlineInputBorder(
       borderSide: BorderSide(
         color: Colors.grey.withOpacity(0.7),
-        width: 2.0,
+        width: 1.0,
       ),
     );
     super.initState();
@@ -44,11 +44,10 @@ class CardFormScreenState extends State<CardFormScreen> {
 
   @override
   Widget build(BuildContext context) {
-    setStatusBarColor(context, Brightness.light);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
-        color: Colors.white,
+        color: AppColors.bgPrimary,
         child: Column(
           children: [
             Container(
@@ -56,7 +55,8 @@ class CardFormScreenState extends State<CardFormScreen> {
             ),
             MyAppBar(
               title: 'Add card',
-              backgroundColor: Colors.white,
+              backgroundColor: AppColors.bgPrimary,
+              textColor: Colors.white,
               hasBackButton: true,
             ),
             Padding(
@@ -65,6 +65,8 @@ class CardFormScreenState extends State<CardFormScreen> {
               ),
               child: CreditCardWidget(
                 padding: 0,
+                frontCardBorder: Border.all(color: AppColors.textDisable),
+                backCardBorder: Border.all(color: AppColors.textDisable),
                 cardNumber: cardNumber,
                 expiryDate: expiryDate,
                 cardHolderName: cardHolderName,
@@ -96,34 +98,34 @@ class CardFormScreenState extends State<CardFormScreen> {
                       cardHolderName: cardHolderName,
                       expiryDate: expiryDate,
                       themeColor: AppColors.primaryBlue,
-                      textColor: AppColors.textDefault,
+                      textColor: Colors.white,
                       cardNumberDecoration: InputDecoration(
                         labelText: 'Number',
                         hintText: 'XXXX XXXX XXXX XXXX',
                         hintStyle: TextStyle(color: AppColors.textDisable),
-                        labelStyle: TextStyle(color: AppColors.textDefault),
+                        labelStyle: TextStyle(color: Colors.white),
                         focusedBorder: border,
                         enabledBorder: border,
                       ),
                       expiryDateDecoration: InputDecoration(
-                        hintStyle: TextStyle(color: AppColors.textDefault),
-                        labelStyle: TextStyle(color: AppColors.textDefault),
+                        hintStyle: TextStyle(color: Colors.white),
+                        labelStyle: TextStyle(color: Colors.white),
                         focusedBorder: border,
                         enabledBorder: border,
                         labelText: 'Expired Date',
                         hintText: 'XX/XX',
                       ),
                       cvvCodeDecoration: InputDecoration(
-                        hintStyle: TextStyle(color: AppColors.textDefault),
-                        labelStyle: TextStyle(color: AppColors.textDefault),
+                        hintStyle: TextStyle(color: Colors.white),
+                        labelStyle: TextStyle(color: Colors.white),
                         focusedBorder: border,
                         enabledBorder: border,
                         labelText: 'CVV',
                         hintText: 'XXX',
                       ),
                       cardHolderDecoration: InputDecoration(
-                        hintStyle: TextStyle(color: AppColors.textDefault),
-                        labelStyle: TextStyle(color: AppColors.textDefault),
+                        hintStyle: TextStyle(color: Colors.white),
+                        labelStyle: TextStyle(color: Colors.white),
                         focusedBorder: border,
                         enabledBorder: border,
                         labelText: 'Card Holder',
