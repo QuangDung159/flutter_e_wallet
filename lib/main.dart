@@ -3,17 +3,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_wallet/UI/screens/splash_screen.dart';
 import 'package:flutter_e_wallet/core/constants/app_colors.dart';
+import 'package:flutter_e_wallet/core/constants/common.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:get/route_manager.dart';
 
 void main() {
-  Stripe.publishableKey = 'pk_test_51JmJfZAuFtBplfKrgE6iUmueVzqWbiTosG1kDBZ4SwX3XRaGpqGPDHXtOsVz1LH3y1OgArtVlYzhg6PE6JJGf6xj00HzAHLgRp';
+  Stripe.publishableKey = stripePublishableKey;
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
