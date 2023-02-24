@@ -7,6 +7,7 @@ import 'package:flutter_e_wallet/UI/widgets/app_bar.dart';
 import 'package:flutter_e_wallet/core/constants/app_colors.dart';
 import 'package:flutter_e_wallet/core/constants/app_dimension.dart';
 import 'package:flutter_e_wallet/core/helpers/asset_helper.dart';
+import 'package:flutter_e_wallet/core/helpers/common_helper.dart';
 
 void main() => runApp(CardFormScreen());
 
@@ -43,6 +44,7 @@ class CardFormScreenState extends State<CardFormScreen> {
 
   @override
   Widget build(BuildContext context) {
+    setStatusBarColor(context, Brightness.light);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(

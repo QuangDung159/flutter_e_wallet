@@ -7,6 +7,7 @@ import 'package:flutter_e_wallet/UI/widgets/card_item.dart';
 import 'package:flutter_e_wallet/core/constants/app_colors.dart';
 import 'package:flutter_e_wallet/core/constants/app_dimension.dart';
 import 'package:flutter_e_wallet/core/helpers/asset_helper.dart';
+import 'package:flutter_e_wallet/core/helpers/common_helper.dart';
 import 'package:get/get.dart';
 
 class MainScreen extends StatefulWidget {
@@ -19,6 +20,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
+    setStatusBarColor(context, Brightness.dark);
     return Scaffold(
       body: Container(
         color: AppColors.bgPrimary,
