@@ -68,7 +68,7 @@ class _MainScreenState extends State<MainScreen> {
         horizontal: AppDimension.contentPadding,
       ),
       margin: EdgeInsets.only(
-        bottom: MediaQuery.of(context).padding.bottom,
+        bottom: MediaQuery.of(context).padding.bottom + AppDimension.contentPadding,
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),

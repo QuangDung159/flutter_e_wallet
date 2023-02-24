@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_wallet/UI/screens/main_screen.dart';
 import 'package:flutter_e_wallet/core/constants/app_colors.dart';
+import 'package:flutter_e_wallet/core/constants/app_dimension.dart';
 import 'package:flutter_e_wallet/core/helpers/asset_helper.dart';
 import 'package:flutter_e_wallet/core/helpers/common_helper.dart';
 import 'package:get/get.dart';
@@ -62,7 +63,8 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
           Positioned(
-            bottom: MediaQuery.of(context).padding.bottom,
+            bottom: MediaQuery.of(context).padding.bottom +
+                AppDimension.contentPadding,
             left: 0,
             right: 0,
             child: Text(
