@@ -3,6 +3,7 @@ class AssetHelper {
   static const String iconDir = 'assets/icons';
 
   static const String imageLogo = '$imageDir/image_logo.png';
+  static const String imageCardBackground = '$imageDir/image_card_background.png';
 
   static const String iconAdd = '$iconDir/icon_add.png';
   static const String iconCard = '$iconDir/icon_card.png';

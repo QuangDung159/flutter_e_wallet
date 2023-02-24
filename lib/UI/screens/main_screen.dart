@@ -94,7 +94,7 @@ class _MainScreenState extends State<MainScreen> {
               child: Container(
                 alignment: Alignment.center,
                 child: Text(
-                  'ADD NEW WALLET',
+                  'ADD NEW CARD',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
