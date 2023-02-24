@@ -7,13 +7,11 @@ import 'package:flutter_e_wallet/UI/widgets/loading_button.dart';
 import 'package:flutter_e_wallet/config.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:http/http.dart' as http;
-
 class CustomCardPaymentScreen extends StatefulWidget {
   const CustomCardPaymentScreen({super.key});
 
   @override
-  State<CustomCardPaymentScreen> createState() =>
-      _CustomCardPaymentScreenState();
+  State<CustomCardPaymentScreen> createState() => _CustomCardPaymentScreenState();
 }
 
 class _CustomCardPaymentScreenState extends State<CustomCardPaymentScreen> {
