@@ -3,9 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_wallet/UI/screens/splash_screen.dart';
 import 'package:flutter_e_wallet/core/constants/app_colors.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:get/route_manager.dart';
 
 void main() {
+  Stripe.publishableKey = 'pk_test_51JmJfZAuFtBplfKrgE6iUmueVzqWbiTosG1kDBZ4SwX3XRaGpqGPDHXtOsVz1LH3y1OgArtVlYzhg6PE6JJGf6xj00HzAHLgRp';
   runApp(const MyApp());
 }
 
