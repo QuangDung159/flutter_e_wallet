@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 import 'package:flutter_e_wallet/UI/screens/custom_card_payment_screen.dart';
+import 'package:flutter_e_wallet/UI/screens/main_screen.dart';
 import 'package:flutter_e_wallet/core/constants/app_colors.dart';
 import 'package:flutter_e_wallet/core/constants/app_dimension.dart';
 import 'package:flutter_e_wallet/core/helpers/asset_helper.dart';
@@ -20,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Future.delayed(Duration(seconds: 2), () {
-      Get.offAll(() => CustomCardPaymentScreen());
+      Get.offAll(() => MainScreen());
     });
   }
 

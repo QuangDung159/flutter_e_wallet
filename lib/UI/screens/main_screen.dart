@@ -1,11 +1,13 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_e_wallet/UI/screens/custom_card_payment_screen.dart';
 import 'package:flutter_e_wallet/UI/widgets/app_bar.dart';
 import 'package:flutter_e_wallet/UI/widgets/card_item.dart';
 import 'package:flutter_e_wallet/core/constants/app_colors.dart';
 import 'package:flutter_e_wallet/core/constants/app_dimension.dart';
 import 'package:flutter_e_wallet/core/helpers/asset_helper.dart';
+import 'package:get/get.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -63,42 +65,46 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   Widget renderButtonAddCard() {
-    return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: AppDimension.contentPadding,
-      ),
-      margin: EdgeInsets.only(
-        bottom: MediaQuery.of(context).padding.bottom + AppDimension.contentPadding,
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: AppColors.primaryBlue,
-      ),
-      height: 80,
-      child: Row(
-        children: [
-          SizedBox(
-            width: 24,
-          ),
-          Image.asset(
-            AssetHelper.iconCardUnfill,
-            width: 40,
-            height: 40,
-          ),
-          Expanded(
-            child: Container(
-              alignment: Alignment.center,
-              child: Text(
-                'ADD NEW WALLET',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
+    return GestureDetector(
+      onTap: () => Get.to(() => CustomCardPaymentScreen()),
+      child: Container(
+        padding: EdgeInsets.symmetric(
+          horizontal: AppDimension.contentPadding,
+        ),
+        margin: EdgeInsets.only(
+          bottom: MediaQuery.of(context).padding.bottom +
+              AppDimension.contentPadding,
+        ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: AppColors.primaryBlue,
+        ),
+        height: 80,
+        child: Row(
+          children: [
+            SizedBox(
+              width: 24,
+            ),
+            Image.asset(
+              AssetHelper.iconCardUnfill,
+              width: 40,
+              height: 40,
+            ),
+            Expanded(
+              child: Container(
+                alignment: Alignment.center,
+                child: Text(
+                  'ADD NEW WALLET',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
