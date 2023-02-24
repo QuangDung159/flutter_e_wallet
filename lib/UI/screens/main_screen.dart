@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:flutter_e_wallet/UI/screens/custom_card_payment_screen.dart';
+import 'package:flutter_e_wallet/UI/screens/card_form_screen.dart';
 import 'package:flutter_e_wallet/UI/widgets/app_bar.dart';
 import 'package:flutter_e_wallet/UI/widgets/card_item.dart';
 import 'package:flutter_e_wallet/core/constants/app_colors.dart';
@@ -66,7 +66,7 @@ class _MainScreenState extends State<MainScreen> {
 
   Widget renderButtonAddCard() {
     return GestureDetector(
-      onTap: () => Get.to(() => CustomCardPaymentScreen()),
+      onTap: () => Get.to(() => CardFormScreen()),
       child: Container(
         padding: EdgeInsets.symmetric(
           horizontal: AppDimension.contentPadding,
